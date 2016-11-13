@@ -1,0 +1,21 @@
+{% extends 'perros/base.html' %}}
+      {% block content %}
+            {% for a in articulo %}
+
+
+            <hr class="featurette-divider">
+
+              <div class="row featurette">
+                <div class="col-md-7">
+                  <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+                  <p>{{a.nombre}}</p>
+                
+                  <p>{{a.color|linebreaksbr}}</p>
+                  <p>{{a.raza|linebreaksbr}}</p>
+                </div>
+                <div class="col-md-5">
+                  <img class="featurette-image img-responsive center-block img-thumbnail" src="{{a.imagen.url}}" alt="Generic placeholder image">
+                </div>
+              </div>
+            {% endfor %}
+        {% endblock content %}
