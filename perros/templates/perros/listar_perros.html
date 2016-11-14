@@ -3,19 +3,18 @@
             {% for a in articulo %}
 
 
-            <hr class="featurette-divider">
-
-              <div class="row featurette">
-                <div class="col-md-7">
-                  <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                  <p>{{a.nombre}}</p>
-                
-                  <p>{{a.color|linebreaksbr}}</p>
-                  <p>{{a.raza|linebreaksbr}}</p>
-                </div>
-                <div class="col-md-5">
-                  <img class="featurette-image img-responsive center-block img-thumbnail" src="{{a.imagen.url}}" alt="Generic placeholder image">
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="{{a.imagen.url}}" width="250" height="250" alt="">
+                  <div class="caption">
+                    <h3>{{a.nombre}}</h3>
+                    <p>{{a.color|linebreaksbr}}</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                  </div>
                 </div>
               </div>
+            </div>
+
             {% endfor %}
         {% endblock content %}
